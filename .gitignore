@@ -1,0 +1,5 @@
+*.o
+ircbot
+.vscode
+code samples.txt
+var.h
