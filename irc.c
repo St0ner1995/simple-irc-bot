@@ -167,7 +167,7 @@ int irc_set_output(irc_t *irc, const char* file)
     return 0;
 }
 
-int irc_reply_message(irc_t *irc, char *irc_nick, char *msg)
+int irc_reply_message(irc_t *irc, char *irc_nick, char *msg) // Reply to Messages in twitch channel
 {
     // Reply to messages
     if ( fnmatch("@st0ner1995*do you want*rocket*", msg, 0x10) == 0) // From AICharlesBot
@@ -176,7 +176,7 @@ int irc_reply_message(irc_t *irc, char *irc_nick, char *msg)
         srand(time(NULL));
         sleep(rand()%3+3);
         // Respond
-        if ( irc_msg(irc->s, irc->channel, "!rockets yes") < 0 )
+        if ( irc_msg(irc->s, irc->channel, "!rockets yes") < 0 ) // respond to AICharlesBot
             return -1;
         // Sleep for a bit
         sleep(rand()%3+3);
@@ -190,7 +190,7 @@ int irc_reply_message(irc_t *irc, char *irc_nick, char *msg)
         srand(time(NULL));
         sleep(rand()%3+3);
         // Respond
-        if ( irc_msg(irc->s, irc->channel, "!nuke yes") < 0 )
+        if ( irc_msg(irc->s, irc->channel, "!nuke yes") < 0 ) // respond to AICharlesBot
             return -1;
         // Sleep for a bit
         sleep(rand()%3+3);

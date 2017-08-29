@@ -1,6 +1,6 @@
 #include "socket.h"
 #include "irc.h"
-#include "var.h"
+#include "var.h" // Seperate auth config file
 
 int main(int argc, char **argv)
 {
